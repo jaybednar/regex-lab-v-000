@@ -16,12 +16,10 @@ end
 def first_word_capitalized_and_ends_with_punctuation?(text)
   if !!text.match(/\b[A-Z]\w+\W\D\b/)
     return true
-  else
-    return false 
-  # elsif !!text.match(/\b[A-Z]\w+ \b/)
-  #   return false
-  # elsif !!text.match(/\b[a-z]\w+\W\D\b/)
-  #   return false
+  elsif !!text.match(/\b[A-Z]\w+[a-zA-Z] \b/)
+    return false
+  elsif !!text.match(/\b[a-z]\w+\W\D\b/)
+    return false
 
   end
 end
