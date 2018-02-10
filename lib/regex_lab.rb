@@ -14,14 +14,15 @@ def words_five_letters_long(text)
 end
 
 def first_word_capitalized_and_ends_with_punctuation?(text)
-  if !!text.match(/\b[A-Z]\w+\b[,.!?]/)
-    return true
-  elsif !!text.match(/\b[A-Z]\w+[a-zA-Z] \b/)
-    return false
-  elsif !!text.match(/\b[a-z]\w+\W\D\b/)
-    return false
+  !!text.match(/\b[A-Z]\w+\b[,.!?]/)
+    # return true
 
-  end
+  # elsif !!text.match(/\b[A-Z]\w+[a-zA-Z] \b/)
+  #   return false
+  # elsif !!text.match(/\b[a-z]\w+\W\D\b/)
+  #   return false
+
+  # end
 end
 
 def valid_phone_number?(phone)
